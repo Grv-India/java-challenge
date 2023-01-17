@@ -4,3 +4,4 @@ jp/co/axa/apidemo/controllers/EmployeeController.class
 jp/co/axa/apidemo/entities/Employee.class
 jp/co/axa/apidemo/services/EmployeeServiceImpl.class
 jp/co/axa/apidemo/services/EmployeeService.class
+jp/co/axa/apidemo/config/SwaggerConfig.class
