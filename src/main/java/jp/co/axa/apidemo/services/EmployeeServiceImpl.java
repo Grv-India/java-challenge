@@ -3,6 +3,9 @@ package jp.co.axa.apidemo.services;
 import jp.co.axa.apidemo.entities.Employee;
 import jp.co.axa.apidemo.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,20 +26,29 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employees;
     }
 
+    @Cacheable(cacheNames = "employee-cache", key = "#employeeId")
     public Employee getEmployee(Long employeeId) {
-        Optional<Employee> optEmp = employeeRepository.findById(employeeId);
-        return optEmp.get();
+        System.out.println("Employee from db");
+        return employeeRepository.findById(employeeId).orElse(null);
     }
 
     public void saveEmployee(Employee employee){
         employeeRepository.save(employee);
     }
 
-    public void deleteEmployee(Long employeeId){
-        employeeRepository.deleteById(employeeId);
+    @CacheEvict(cacheNames = "employee-cache", key = "#employeeId")
+    public String deleteEmployee(Long employeeId){
+        try{
+            employeeRepository.deleteById(employeeId);
+        }
+        catch(Exception error) {
+            return "Some issue in deleting the employee record";
+        }
+        return "Employee Record deleted";
     }
 
-    public void updateEmployee(Employee employee) {
-        employeeRepository.save(employee);
+    @CachePut(cacheNames = "employee-cache", key = "#employee.id")
+    public Employee updateEmployee(Employee employee) {
+        return employeeRepository.save(employee);
     }
 }

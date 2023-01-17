@@ -30,24 +30,33 @@ public class EmployeeController {
     }
 
     @PostMapping("/employees")
-    public void saveEmployee(Employee employee){
+    public void saveEmployee(@RequestBody Employee employee){
         employeeService.saveEmployee(employee);
         System.out.println("Employee Saved Successfully");
     }
 
     @DeleteMapping("/employees/{employeeId}")
-    public void deleteEmployee(@PathVariable(name="employeeId")Long employeeId){
-        employeeService.deleteEmployee(employeeId);
-        System.out.println("Employee Deleted Successfully");
+    public String deleteEmployee(@PathVariable(name="employeeId")Long employeeId){
+        return employeeService.deleteEmployee(employeeId);
     }
 
     @PutMapping("/employees/{employeeId}")
-    public void updateEmployee(@RequestBody Employee employee,
+    public Employee updateEmployee(@RequestBody Employee employee,
                                @PathVariable(name="employeeId")Long employeeId){
         Employee emp = employeeService.getEmployee(employeeId);
         if(emp != null){
-            employeeService.updateEmployee(employee);
+            if((employee.getName() !=null) && (employee.getName() != emp.getName())){
+                emp.setName(employee.getName());
+            }
+            if((employee.getDepartment() !=null) && (employee.getDepartment() != emp.getDepartment())){
+                emp.setDepartment(employee.getDepartment());
+            }
+            if((employee.getSalary() !=null) && (employee.getSalary() != emp.getSalary())){
+                emp.setSalary(employee.getSalary());
+            }
+            return employeeService.updateEmployee(emp);
         }
+        return new Employee();
 
     }
 

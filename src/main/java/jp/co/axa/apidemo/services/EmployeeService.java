@@ -12,7 +12,7 @@ public interface EmployeeService {
 
     public void saveEmployee(Employee employee);
 
-    public void deleteEmployee(Long employeeId);
+    public String deleteEmployee(Long employeeId);
 
-    public void updateEmployee(Employee employee);
+    public Employee updateEmployee(Employee employee);
 }
