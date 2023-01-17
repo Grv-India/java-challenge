@@ -26,7 +26,7 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("Spring Boot Swagger Configuration")
-                .description("\"Swagger configuration for application \"")
+                .description("\"Swagger configuration for axa.application \"")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
                 .contact(new Contact("Gaurav Gupta", "", "nihon.gaurav@gmail.com"))
                 .build();
