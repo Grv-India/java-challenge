@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57f9d283-3010-46d6-b548-e138b600e654" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jp/co/axa/apidemo/services/EmployeeServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/ApiDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/ApiDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/co/axa/apidemo/entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jp/co/axa/apidemo/ApiDemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jp/co/axa/apidemo/ApiDemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jp/co/axa/apidemo/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jp/co/axa/apidemo/controllers/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +50,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/srishtij.14/Desktop/Gaurav_work/Java-Challenge-Final/java-challenge&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/srishtij.14/Desktop/Gaurav_work/Java-Challenge-Final/java-challenge",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="JUnit.EmployeeServiceImplTest.deleteEmployee">
+    <configuration name="EmployeeServiceImplTest.deleteEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jp.co.axa.apidemo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jp.co.axa.apidemo.services" />
+      <option name="MAIN_CLASS_NAME" value="jp.co.axa.apidemo.services.EmployeeServiceImplTest" />
+      <option name="METHOD_NAME" value="deleteEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeServiceImplTest.getEmployeeFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jp.co.axa.apidemo.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jp.co.axa.apidemo.services" />
+      <option name="MAIN_CLASS_NAME" value="jp.co.axa.apidemo.services.EmployeeServiceImplTest" />
+      <option name="METHOD_NAME" value="getEmployeeFailure" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EmployeeServiceImplTest.deleteEmployee" />
+        <item itemvalue="JUnit.EmployeeServiceImplTest.getEmployeeFailure" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
